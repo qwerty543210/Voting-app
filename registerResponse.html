@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="jquery.min.js"></script>
+        <script src="options.js"></script>
+        <style>
+
+            body{
+                background: #34495e;
+            }
+            #box{
+                text-align: center;
+                font-family: sans-serif;
+                margin : 100px auto;
+                width: 50%;
+                border-radius: 20px;
+                padding: 30px 0;
+                
+                background : #191919;
+
+            }
+            #welcome{
+                margin : 50px;
+                font-size: 20px;
+                color : white;
+                text-transform: uppercase;
+            }
+            #prompt{
+                font-size: 20px;
+                color:white;
+            }
+            .inputs{
+                background : none;
+                margin: 30px auto;
+                font-size: 30px;
+                width : 50%;
+                border-radius: 50px;
+                border :0;
+                border : 2px solid #3498db;
+                color : white;
+                transition : 0.5s;
+                text-decoration: none;
+                padding : 5px;
+                
+
+            }
+            .inputs:hover{
+                width:80%;
+                border-color: #2ecc71;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = box>
+            <p id=welcome> You have been registered!</p>
+            <p id=prompt> Please login to continue</p>
+            <div id = login></div>
+        </div>
+
+    </body>
+    <script type="text/javascript">
+
+function Login_html() {
+			console.log("commonOptions ", commonOptions);
+			let loginUrl = 'https://' + commonOptions.appName + '.hub.loginradius.com/auth.aspx?action=login&return_url=' + domainName + '/vote';
+
+			$("#login").prepend("<a style ='text-decoration:none' href =" + loginUrl + "> <div class='inputs' >Login</div> </a>");
+        }
+        Login_html();
+
+	</script>
+</html>
+

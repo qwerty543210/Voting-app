@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body{
+                background: #34495e;
+            }
+            #box{
+                text-align: center;
+                font-family: sans-serif;
+                margin : 100px auto;
+                width: 40%;
+                background : #191919;
+                border-radius: 20px;
+                padding: 30px 0;
+                color: white;
+                transition:0.5s;
+            }
+            #box h3{
+                color: #00fff1;
+            }
+            #box label input{
+                display:flex;
+                appearance: none;
+                -webkit-appearance: none;
+                margin:0px 0px;
+                padding:5px;
+                border-radius: 2px;
+                cursor:pointer;
+                outline:none;
+                transition: 0.5s;
+               
+            }
+            #box label p{
+                padding: 25px 0;
+                border-radius: 50%;
+                text-align: center;
+                box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+                            2px 2px 6px rgba(0, 0, 0, 0.8);
+                transition:0.25s;
+            }
+            #box label p:hover{
+                box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.1),
+                            2px 2px 6px rgba(0, 0, 0, 0.8),
+                            inset -2px -2px 10px rgba(255, 255, 255, 0.05),
+                            inset 2px 2px 10px rgba(0, 0, 0, 0.5);
+            }
+            #box label input:checked ~ p{
+                color:#00fff1;
+                box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.1),
+                            inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+                text-shadow: 0 0 5px #00fff1,
+                             0 0 20px #00fff1;
+            }
+            input[type=submit]{
+                border-radius: 20px;
+                color: white;
+                border-color:#2ecc71;
+                cursor: pointer;
+                background: none;
+                padding : 10px 0;
+                margin: 10px;
+                width: 30%;
+                transition:0.5s;
+                outline:none;
+            }
+            input[type=submit]:hover{
+                background:#2ecc71;
+            
+            }
+            #inputBox{
+                text-align: left;
+                width:16%;
+                margin: 10px auto;
+            }
+        </style>
+    </head>
+    <body> 
+        <div id="box">
+            <h1>Welcome to the voting app</h1>
+            <h3>Which laptop brand do you use?</h3>
+            <form class= "regForm" action="vote" method="post">
+                <div id="inputBox">
+                    <div>
+                        <label>
+                            <input id="dell" type="radio" name="vote" value="1">
+                            <p>DELL</p>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input id="asus" type="radio" name="vote" value="2">
+                            <p>ASUS</p>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input id="hp" type="radio" name="vote" value="3">
+                            <p>HP</p>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input id="acer" type="radio" name="vote" value="4">
+                            <p>ACER</p>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input id="apple" type="radio" name="vote" value="5">
+                            <p>APPLE</p>
+                        </label>
+                    </div>
+                </div>
+                <input type="submit">
+            </form>
+        </div>
+
+    </body>
+</html>

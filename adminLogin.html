@@ -1,0 +1,80 @@
+
+<!doctype HTML>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Admin login Page</title>
+        <style>
+            body{
+                background:#34495e;
+            }
+            #box h1,h3{
+                color : white;
+                text-transform: uppercase;
+                font-weight: 100;
+            }
+            #box{
+                text-align: center;
+                font-family: sans-serif;
+                margin : 100px auto;
+                width: 40%;
+                background : #191919;
+                border-radius: 20px;
+                padding: 30px 0;
+                transition : 0.5s;
+
+            }
+            input[type="text"], input[type="password"]{
+                border:0;
+                background:none;
+                width : 40%;
+                display:block;
+                text-align: center;
+                margin:20px auto;
+                padding:5px;
+                border-radius: 24px;
+                border: 2px solid #3498db;
+                padding : 14px 10px;
+                outline:none;
+                color:white;
+                transition : 0.5s;
+            }
+            input[type="text"]:focus, input[type="password"]:focus{
+                border-color: #2ecc71;
+                width: 80%;
+            }
+            input[type=submit]{
+                border:0;
+                background:none;
+                width : 20%;
+                display:block;
+                text-align: center;
+                margin:10px auto;
+                padding:5px;
+                border-radius: 24px;
+                border: 2px solid #2ecc71;
+                padding : 14px 10px;
+                outline:none;
+                transition : 0.5s;
+                color: white;
+                cursor:pointer;
+            }
+            input[type=submit]:hover{
+                background:#2ecc71;
+            }
+            </style>
+    </head>
+    <body>
+        <div id="box">
+            
+            <h1>Welcome Back!</h1>
+            <h3>Please Sign In to cast your Vote</h3>
+            <form action="admin" method="post">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit" value ="Login">
+            </form>
+        </div>
+    </body>
+</html>
